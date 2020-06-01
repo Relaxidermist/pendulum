@@ -10,7 +10,7 @@
 class iMU {
   public:
   //Constructor
-    iMU(bool displayMsg);
+    iMU();
   //Methods
   void Begin();
   void ConfigureGyro();

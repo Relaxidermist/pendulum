@@ -14,7 +14,7 @@
 #define ACC_Y_REG 0x3D
 #define ACC_Z_REG 0x3F
 
-iMU::iMU(bool displayMsg) {
+iMU::iMU() {
   
 }
 

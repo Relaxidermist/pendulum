@@ -1,23 +1,24 @@
 #include <PID_v1.h>
 #include "IMU.h"
 
-iMU imu(false);
-
 //PID VARS
 
-double MotorPWM, TargetTheta;
+double MotorPWM = 0; 
+double TargetTheta = 0;
 double kp = 0.5;
 double ki = 0.5;
 double kd = 0.5;
 
+// Instantiate an instance of the IMU class
 
+iMU imu;
 
-PID myPID(&imu.THETA_Y,&MotorPWM, &TargetTheta, 0.5, 0.5, 0.5, DIRECT);
+// Instantiate an instance of the PID class
+
+PID myPID(&imu.THETA_Y,&MotorPWM, &TargetTheta, kp, ki, kd, DIRECT);
 
 void setup() {
  myPID.SetMode(AUTOMATIC);
-
- TargetTheta = 0;
  
   // put your setup code here, to run once:
  imu.Begin();
