@@ -7,14 +7,19 @@
   #include "WProgram.h"
 #endif
 
-class Motor {
+class motor {
   public:
-  //Constructor
-  Motor();
-  void Begin();
+  
+    //Constructor
+    motor(int Enable, int Phase);
+    void Direction(bool Clockwise);
+    void Speed(int Speed);
 
   private:
+
+    int _Enable;
+    int _Phase;
   
-}
+};
 
 #endif

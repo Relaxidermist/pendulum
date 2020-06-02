@@ -1,5 +1,6 @@
 #include <PID_v1.h>
 #include "IMU.h"
+#include "Motor.h"
 
 //PID VARS
 
