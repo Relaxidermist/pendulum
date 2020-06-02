@@ -13,7 +13,7 @@ class motor {
     //Constructor
     motor(int Enable, int Phase);
     void Direction(bool Clockwise);
-    void Speed(int Speed);
+    void Speed(int Level);
 
   private:
 
